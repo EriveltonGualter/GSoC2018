@@ -44,26 +44,26 @@
             <a class="post-category" href="./tag/octave.html">Octave</a>
         </p>
     </div>
-    <p>The community bonding period is over. These last 3 previous weeks were really busy because I was in my final week, class project and my doctoral research. However, I basically finish everything I wanted to do before the “Coding officially begins!”:
-I got straight “A’s” in Optimal Control and Intelligent Control System:</p>
+    <p>The community bonding period is over. The last 3 weeks were really busy because I was in my finals week, final projects and my doctoral research. However, I basically completed everything I wanted to before the “Coding officially begins!”:</p>
 <ul class="simple">
+<li>Finished Optimal Control and Intelligent Control System classes;</li>
 <li>Submitted a conference paper;</li>
-<li>Finish a draft a journal paper.</li>
-<li>It was a busy period.</li>
+<li>Finished a draft journal paper.</li>
 </ul>
-<p>In concurrence all the activities was going on, I had a few discussion with my mentors: Douglas Stewart and John Swensen. As, cited in the previous post, the main goal of the project will be developing the &quot;back-end&quot; capable to perform the same tasks with the current version and for the &quot;front-end&quot;, it will be used the UI Elements that is more similar to the older version of sisotool.</p>
+<p>It was a busy period.</p>
+<p>In concurrence with all the activities that were going on, I had a few discussions with my mentors Douglas Stewart and John Swensen. As, cited in the previous post, the main goal of the project will be to develop the &quot;back-end&quot; capable of performing the same tasks with the current version and for the &quot;front-end&quot;, the UI Elements will be used since it is more similar to the older version of sisotool.</p>
 <div class="section" id="some-notes">
 <h2>Some Notes</h2>
-<p>Octave already have a package called control created by Lukas Reichlin and maintainer by Alexander Wilms and Doug Stewart. There are an extended list of function which can be found here: <a class="reference external" href="https://octave.sourceforge.io/control/overview.html">https://octave.sourceforge.io/control/overview.html</a> .</p>
-<p>The sisotool project will take advantage of plot functions from control package in order to create the desired interface, the following shows some of the scripts will be used:</p>
+<p>Octave already has a package called control created by Lukas Reichlin and is being maintained by Alexander Wilms and Doug Stewart. There is an extended list of function which can be found here: <a class="reference external" href="https://octave.sourceforge.io/control/overview.html">https://octave.sourceforge.io/control/overview.html</a>.</p>
+<p>The sisotool project will take advantage of plot functions from control package in order to create the desired interface. The following shows some of the scripts that will be used:</p>
 <ul class="simple">
 <li>bode.m;</li>
 <li>rlocus.m;</li>
 <li>nyquist.m.</li>
 </ul>
 <p><strong>Plot Diagrams</strong></p>
-<p>For those who does not know what is bode diagram, it can be defined as a plot which shows the gain and phase response of a LTI system. Here you can find a better explanation about the theory behind: <a class="reference external" href="https://en.wikibooks.org/wiki/Control_Systems/Bode_Plots">https://en.wikibooks.org/wiki/Control_Systems/Bode_Plots</a></p>
-<p>The bode function uses a LTI system as an input and the output can be the magnitude, phase and frequency vectors. Also, it display the plots. In this community bonding period, I spent a quite time modifying the script in order to understand how it was coded.  Here is some code example to plot bode diagram and others:</p>
+<p>For those who do not know what is bode diagram, it can be defined as a plot that shows the gain and phase response of a LTI system. Here you can find a better explanation about the theory behind it: <a class="reference external" href="https://en.wikibooks.org/wiki/Control_Systems/Bode_Plots">https://en.wikibooks.org/wiki/Control_Systems/Bode_Plots</a></p>
+<p>The bode function uses a LTI system as an input and the output can be the magnitude, phase and frequency vectors. It also displays the plots. In this community bonding period, I spent quite some time modifying the previous scritp in order to understand how it was coded.  Here is some code examples to plot bode diagram and others:</p>
 <div class="highlight"><pre><span></span><span class="n">pkg</span> <span class="n">load</span> <span class="n">control</span> <span class="c">% Load control package</span>
 
 <span class="n">s</span> <span class="p">=</span> <span class="n">tf</span><span class="p">(</span><span class="s">&#39;s&#39;</span><span class="p">);</span>
@@ -90,14 +90,14 @@ I got straight “A’s” in Optimal Control and Intelligent Control System:</p
 <span class="n">figure</span><span class="p">;</span>
 <span class="n">nyquist</span><span class="p">(</span><span class="n">sys1</span><span class="p">);</span>
 </pre></div>
-<p>More documentation about those functions can be found here:</p>
+<p>More documentation about these functions can be found here:</p>
 <ul class="simple">
 <li><a class="reference external" href="https://octave.sourceforge.io/control/function/bode.html">https://octave.sourceforge.io/control/function/bode.html</a></li>
 <li><a class="reference external" href="https://octave.sourceforge.io/control/function/nyquist.html">https://octave.sourceforge.io/control/function/nyquist.html</a></li>
 <li><a class="reference external" href="https://octave.sourceforge.io/control/function/rlocus.html">https://octave.sourceforge.io/control/function/rlocus.html</a></li>
 </ul>
 <p><strong>Initial layout – sisotool v1</strong></p>
-<p>Figure above shows the initial concept for the sisotool. For the initial layout, all the diagram will be fixed. It will contains: Root Locus, Open-Loop Bode, Nyquist and Step Response plots. In addition, there will be UI Elements with designer applications for the controller.</p>
+<p>The figure above shows the initial concept for the sisotool. For the initial layout, all the diagrams will be fixed. It will contain: Root Locus, Open-Loop Bode, Nyquist and Step Response plots. In addition, there will be UI Elements with designer applications for the controller.</p>
 <div class="figure align-center">
 <object data="images/distribution.svg" style="width: 600px;" type="image/svg+xml">
 alternate text</object>
